@@ -82,55 +82,55 @@ const questions = [
            
               
 
-           fs.writeFile("README.md",
-           
-           `
-           # ${answers.title} ${displayBadge}
+fs.writeFile("README.md",
 
-           ## Description
-           
-           ${answers.description}
-         
-           ## Table of Contents (Optional)
-           
-           If your README is long, add a table of contents to make it easy for users to find what they need.
-           
-           - [Installation](#installation)
-           - [Usage](#usage)
-           - [Credits](#credits)
-           - [License](#license)
-           
-           ## Installation
-         
-           ${answers.installation}
-           
-           ## Usage
-         
-           ${answers.usage}
-           
-           ## Credits
-         
-           ${answers.contributions}
-           
-           ## License
-         
-           ${answers.license}
-           
-           ## Tests
-         
-           ${answers.tests}
-         
-           ## Contact Me
-         
-           If you have questions, please reach out to me via ${answers.contact}. My email is ${answers.email}, and this is my [github profile.](www.github.com/${answers.github})
-           
-           `
-           , (err) => (err)? console.log(err) : console.log("README successfully created!"));
+`
+# ${answers.title} ${displayBadge}
 
-           
+## Description
 
-          }
-        );
+${answers.description}
+
+## Table of Contents (Optional)
+
+If your README is long, add a table of contents to make it easy for users to find what they need.
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+
+${answers.installation}
+
+## Usage
+
+${answers.usage}
+
+## Credits
+
+${answers.contributions}
+
+## License
+
+${answers.license}
+
+## Tests
+
+${answers.tests}
+
+## Contact Me
+
+If you have questions, please reach out to me via ${answers.contact}. My email is ${answers.email}, and this is my [github profile.](www.github.com/${answers.github})
+
+`
+, (err) => (err)? console.log(err) : console.log("README successfully created!"));
+
+
+
+}
+);
        
 
 
