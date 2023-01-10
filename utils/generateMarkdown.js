@@ -1,6 +1,30 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(data) {
+ 
+  switch(data.license){
+    case 'Apache License 2.0':
+      badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+      break;
+    case 'GNU General Public License v2.0':
+      badge = '[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)'
+      break;
+    case 'MIT License':
+      badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+      break;
+    case 'Boost Software License 1.0':
+      badge = '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+      break;
+    case 'No License':
+      badge = '';
+      break;
+    default:
+      badge = '';
+
+   }
+}
+
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -12,9 +36,9 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.title} 
 
-  # ${data.title}
+  # ${data.title} ${data.license}
 
   ## Description
   
